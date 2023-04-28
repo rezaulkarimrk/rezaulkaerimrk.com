@@ -1,0 +1,28 @@
+.app__single-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 28%;
+    margin-top: 25vh;
+}
+
+.app__singleAbout-content_heading {
+    font-size: 4rem;
+    line-height: 10rem;
+}
+
+.app__singleAbout-content_heading h2 {
+    font-size: 2.7rem;
+}
+
+.app__single-about p {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.app__single-about .app__btn {
+    margin-top: 2rem;
+}

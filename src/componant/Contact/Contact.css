@@ -1,0 +1,115 @@
+.app__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app__contact h1 {
+    margin-bottom: 3rem;
+    font-size: 4.7rem;
+}
+
+.app__contact-form {
+    width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.app__contact-input {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.app__contact-input input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+
+}
+
+.app__contact-input input {
+    width: 49%;
+}
+
+@media screen and (min-width: 2000px) {
+    .app__contact-form {
+        width: 150rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    
+}
+@media screen and (max-width: 850px) {
+    .app__contact-form {
+        width: 40rem;
+        margin-bottom: 3rem;
+    }
+    .app__contact-input {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .app__contact-input input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app__contact-form {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+}
+
+
+
+.app__contact-warning {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 110;
+    padding: 2px 17px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef;
+    margin: 8rem;
+    border-radius: 1rem;
+    color: var(--second-bg-color);
+    animation: clint-notification 10s  ease-in 1;
+    opacity: 0;
+}
+
+.app__contact-warning h2 {
+    font-size: 3.7rem;
+    font-weight: 200;
+}
+
+@keyframes clint-notification {
+
+    5% {
+        opacity: 0.2 ;
+    }
+    8% {
+        opacity: 0.3 ;
+    }
+    12% {
+        opacity: 0.4 ;
+    }
+    16% {
+        opacity: 0.5 ;
+    }
+    20%{
+        opacity: 0.7;
+    }
+    21%,100% {
+        opacity: 1 ;
+    }
+}

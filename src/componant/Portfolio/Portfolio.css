@@ -1,0 +1,114 @@
+.app__portfolio {
+    background: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.app__portfolio-heading {
+    margin-bottom: 4rem;
+    font-size: 4.2rem;
+}
+
+.app__portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.app__portfolio-container_box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    height: 30rem;
+}
+
+.app__portfolio-container_box img {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.7s;
+}
+
+.app__portfolio-container_box img:hover {
+    transform: scale(1.1);
+}
+
+.app__portfolio-container_box-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translatey(100%);
+    transition: 0.7s ease;
+}
+.app__portfolio-container_box:hover .app__portfolio-container_box-content {
+    transform: translatey(0);
+    
+}
+
+.app__portfolio-container_box-content h4 {
+    font-size: 2.7rem;
+}
+
+.app__portfolio-container_box-content p {
+    font-size: 1.2rem;
+    margin: .3rem 1rem;
+}
+
+.app__portfolio-container_box-content a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin: 0.5rem 0;
+}
+
+.app__portfolio-container_box-content a svg {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+@media screen and (min-width: 2000px) {
+    
+}
+
+@media screen and (max-width: 1150px) {
+    .app__portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .app__portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3.5rem;
+    }
+    .app__portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+}
+

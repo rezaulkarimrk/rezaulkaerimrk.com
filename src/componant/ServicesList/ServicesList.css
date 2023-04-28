@@ -1,0 +1,19 @@
+.app__single-services {
+    margin-top: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__single-services h1 {
+    color: var(--main-color);
+}
+
+.app__single-services p {
+    opacity: 0.7;
+    margin: 2rem 20rem;
+    text-align: justify;
+    font-size: 1.7rem;
+}

@@ -1,0 +1,12 @@
+.app__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app__error h1 {
+    color: red;
+    font-size: 4rem;
+    font-weight: 400;
+}
