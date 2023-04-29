@@ -6,14 +6,10 @@ import { UserContext } from './componant/Context/UserContext';
 
 
 const App = () => {
-  const user ={
-    username: '',
-    password: '',
-    status: false,
-  }
+  const [user, setUser] = useState([]);
   
   return (
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={[user, setUser]}>
       <BrowserRouter >
         <Header /> 
         <Routes >

@@ -8,7 +8,7 @@ const Contact = () => {
   const [userDetails, setUserDetails] = useState([]);
   const [userMessage, setUserMessage] = useState([]);
   const [userNotification, setUserNotification] = useState(false);
-  const [message, setMessage] = useState('Thanks for your email');
+  const [message, setMessage] = useState('Your mail was not send');
 
 
 
@@ -62,16 +62,33 @@ const Contact = () => {
     e.preventDefault();
     
     const allData = ({...userMessage, ...userDetails, ...ip});
+    console.log()
+    if(userMessage){
+      await fetch(`${process.env.REACT_APP_DB_URL}message`, {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify(allData)
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        setMessage(data.message)
+      })
+      .catch((error) => {
+        setMessage('Error mail was not send');
+      });
 
-    //data fetch area
+      e.target.reset();
+    }
+    else{
+      setMessage('Please Fillup from');
+    }
+    
     
 
     //to show a notification in clint
     setUserNotification(true)
     setTimeout(() => setUserNotification(false), 5000);
 
-    e.target.reset();
-    console.table(allData);
     
   }
   

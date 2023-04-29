@@ -5,27 +5,51 @@ import './cPanel_login.css'
 
 const CPanel_Login = () => {
     const [warning, setWarning] = useState(false);
-    const user = useContext(UserContext);
+    const [warningMessage, setWarningMessage] = useState('');
+    const {user, setUser} = useContext(UserContext);
 
-    const warninghandle = () => {
-        if(true){
-            setWarning(true);
+    const warninghandle = (status, message) => {
+        if(status){
+            setWarningMessage(message);
+            setWarning(status);
             setTimeout(() => setWarning(false), 5000);
         }
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const username = (e.target.username.value);
         const password = (e.target.password.value);
         if(username ==='' || password === '' || username.length<4 || password.length<4){
-            warninghandle();
+            warninghandle(true, 'Please enter user and password');
+            return;
         }
         const data = {username, password};
-        // fetch()
-        console.log(process.env.REACT_APP_USER_URL);
+        await fetch(`${process.env.REACT_APP_DB_URL}admin/login`, {
+            method: 'POST',
+            headers: {'Content-Type' : 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.success){
+                setUser(data);
+                // user.username = data.username;
+            }
+            if(!data.success){
+                warninghandle(!data.success, data.message)
+            }
+
+        })
+        .catch(error => {
+            warninghandle(true, 'Error something');
+            setUser('hello')
+            console.log(error)
+        });
+
         console.log(user);
-        e.target.reset();
+        // e.target.reset();
 
     }
 
@@ -40,7 +64,7 @@ const CPanel_Login = () => {
                     <label for="username">Username</label>
                 </div>
                 { warning && <div className="app__warning">
-                                <h1>Wrong User or Password</h1>
+                                <h1>{warningMessage}</h1>
                             </div>
                 }
                 
