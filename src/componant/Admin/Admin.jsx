@@ -37,11 +37,33 @@ const Admin = () => {
       <div className="app__admin-content">
         {allContent && 
           <div className='app__admin-content_all' >
-            <h3>All Menu</h3>
-            <button type='button' className='app__button' >All Message</button>
+            <h3>All Message</h3>
+            <div className="app_admin-content_all-box">
+              <div className='app_admin-content_all-box_item'>
+                <table>
+                  <thead>
+                    <tr>
+                      <td><h5>Name</h5></td>
+                      <td><h5>Email</h5></td>
+                      <td><h5>Mobile</h5></td>
+                      <td><h5>subject</h5></td>
+                      <td><h5>Action</h5></td>
+                    </tr>
+                  </thead>
+                </table>
+                
+                
+                
+                
+                <div className='app__admin-action' >
+                  
+                </div>
+              </div>
+            </div>
+            
           </div>
         }
-        {
+        { singleContent &&
           <div className='app__admin-content_single' >
               hello
           </div>
