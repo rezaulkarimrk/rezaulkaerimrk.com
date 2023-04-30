@@ -1,8 +1,27 @@
-.app__admin{
+.app__admin {
     display: flex;
-    justify-content: center;
-    margin-top: 40vh;
-    margin-bottom: 40vh;
+    justify-content: flex-start;
+    margin-top: 8rem;
     color: black;
-    font-size: 14rem;
+    flex-direction: row;
+    gap: 2rem;
+    
+}
+
+.app__admin-sideber {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 24rem;
+    padding: 0px 2rem;
+    background: var(--second-bg-color);
+    height: 80vh;
+    margin-bottom: -1.5rem;
+}
+
+.app__admin-sideber h3 {
+    margin: 3rem auto;
+    color: #fff;
+    font-size: 2.7rem;
 }

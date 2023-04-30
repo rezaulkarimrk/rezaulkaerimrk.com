@@ -10,7 +10,6 @@ const Protected = ({user, children}) => {
         return children
     }
     if(true){
-        console.log(auth);
         return <Admin />;
     }
   return <Navigate to='/cPanel' replace />;
