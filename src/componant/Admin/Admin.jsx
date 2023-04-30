@@ -42,7 +42,7 @@ const Admin = () => {
           </div>
         }
         {
-          <div>
+          <div className='app__admin-content_single' >
               hello
           </div>
         }
