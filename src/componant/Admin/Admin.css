@@ -102,6 +102,11 @@
     margin: 0.5rem 0;
     color: #fff;
 }
+
+.app__admin-content_single-per div {
+    min-width: 16rem;
+}
+
 .app__admin-content_single-per h4 {
     display: block;
     align-items: center;
