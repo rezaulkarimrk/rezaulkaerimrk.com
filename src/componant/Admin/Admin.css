@@ -87,25 +87,12 @@
     background: #f92e2e;
 }
 
-/* table {
+.app__admin-content_single {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
 }
-
-tr {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-thead, tbody {
-    width: 100%;
-} */
-
 
 @media screen and (min-width: 2000px) {
     

@@ -28,6 +28,9 @@ const Admin = () => {
   const handleSingleContent = (id) => {
     setSingleContent(true);
     setAllContent(false);
+
+    setSingleContentData(allData.filter(item => item._id ===id));
+    console.log(singleContentData, id);
   }
 
   const handleDelete = (id) => {
@@ -89,8 +92,91 @@ const Admin = () => {
         }
         { singleContent &&
           <div className='app__admin-content_single' >
-              <div >
+              <div className='app__admin-content_single-per' >
+                <h4> Name: </h4>
+                <h5>{singleContentData[0].name}</h5>
               </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Email: </h4>
+                <h5>{singleContentData[0].email}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Phone: </h4>
+                <h5>{singleContentData[0].phone}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Name: </h4>
+                <h5>{singleContentData[0].subject}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Message: </h4>
+                <h5>{singleContentData[0].message}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Railway: </h4>
+                <h5>{singleContentData[0].railway}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Road: </h4>
+                <h5>{singleContentData[0].road}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Town: </h4>
+                <h5>{singleContentData[0].town}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> County: </h4>
+                <h5>{singleContentData[0].county}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> State_District: </h4>
+                <h5>{singleContentData[0].state_district}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> ISO3166_2_lvl4: </h4>
+                <h5>{singleContentData[0].ISO3166_2_lvl4}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> ZIP Code: </h4>
+                <h5>{singleContentData[0].postcode}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Country Code: </h4>
+                <h5>{singleContentData[0].country_code}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Country: </h4>
+                <h5>{singleContentData[0].country}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> IP: </h4>
+                <h5>{singleContentData[0].ip}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Mail Date: </h4>
+                <h5>{singleContentData[0].date}</h5>
+              </div>
+
+              <div className='app__admin-content_single-per' >
+                <h4> Total Mail: </h4>
+                <h5>0{singleContentData[0].mailCount}</h5>
+              </div>
+
           </div>
         }
         
