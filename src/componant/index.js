@@ -10,6 +10,8 @@ import Footer from './Footer/Footer';
 import Error from './Error/Error';
 import ServicesList from './ServicesList/ServicesList';
 import CPanel_Login from './cPanel/cPanel_Login';
+import Admin from './Admin/Admin';
+import Protected from './Protected/Protected';
 
 
 export {
@@ -25,4 +27,6 @@ export {
   Error,
   ServicesList,
   CPanel_Login,
+  Admin,
+  Protected,
 };

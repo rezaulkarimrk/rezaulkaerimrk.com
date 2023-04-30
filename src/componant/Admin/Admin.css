@@ -1,0 +1,8 @@
+.app__admin{
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
+    color: black;
+    font-size: 14rem;
+}
