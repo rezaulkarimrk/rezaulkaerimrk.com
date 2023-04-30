@@ -62,11 +62,36 @@
     margin: 1rem 2rem;
 }
 
-table {
+.app_admin-content_all-box_item p {
+    font-size: 1.5rem;
+    color: #FFF;
+    margin-right: 1rem;
+}
+
+
+.app__message-btn {
+    background: transparent;
+    font-size: 1.6rem;
+    margin: 0.5rem 0.2rem;
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.show_more-btn {
+    background: #0ccf9e;
+}
+
+.delete-btn {
+    background: #f92e2e;
+}
+
+/* table {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 tr {
@@ -76,16 +101,19 @@ tr {
     width: 100%;
 }
 
-thead {
+thead, tbody {
     width: 100%;
-}
+} */
 
 
 @media screen and (min-width: 2000px) {
     
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1000px) {
+    .app__admin-sideber {
+        padding-left: 1rem;
+    }
     
 }
 
