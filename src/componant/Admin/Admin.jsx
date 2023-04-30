@@ -5,20 +5,20 @@ import './Admin.css';
 const Admin = () => {
   const [allContent, setAllContent] = useState(true);
   const [singleContent, setSingleContent] = useState(false);
+  const [singleContentData, setSingleContentData] = useState(null);
   const [allData, setAlldata] = useState([]);
-  const [singleData, setSingleData] = useState(null);
+
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_DB_URL}message`)
     .then(res => res.json())
     .then( async (data) => {
       if(data.success){
-        setAlldata(Object.keys(data.data).reverse());
+        setAlldata((data.data).reverse());
       }
-      setTimeout(() => console.log(allData), 5000);
     })
     .catch(error => console.log(error) );
-  }, []);
+  }, [singleContent, ]);
 
   const handleAllContent = () => {
     setSingleContent(false);
@@ -28,11 +28,17 @@ const Admin = () => {
   const handleSingleContent = (id) => {
     setSingleContent(true);
     setAllContent(false);
-    console.log('single', id)
   }
 
   const handleDelete = (id) => {
-    console.log('deleted', id);
+    fetch(`${process.env.REACT_APP_DB_URL}message/${id}`,{
+      method: 'Delete'
+    })
+    .then(res => res.json())
+    .then( async (data) => {
+    })
+    .catch(error => console.log(error) );
+    setAlldata(allData.filter((item) => id!==item._id))
   }
 
   return (
@@ -70,6 +76,7 @@ const Admin = () => {
                             <button type='button' className='app__message-btn delete-btn' onClick={()=> handleDelete(item._id)} >Delete</button>
                           </td>
                         </tr>
+
                       ))
                     }
                     
@@ -82,7 +89,8 @@ const Admin = () => {
         }
         { singleContent &&
           <div className='app__admin-content_single' >
-              hello
+              <div >
+              </div>
           </div>
         }
         
