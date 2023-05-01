@@ -103,14 +103,14 @@ const Contact = () => {
 
       <form onSubmit={handleSubmit} className='app__contact-form' action="#">
         <div className='app__contact-input'>
-          <input name='name' type="text" placeholder='Full Name' onChange={handleChange} />
-          <input name='email' type="email" placeholder='Email Address' onChange={handleChange} />
+          <input required name='name' type="text" placeholder='Full Name' onChange={handleChange} />
+          <input required name='email' type="email" placeholder='Email Address' onChange={handleChange} />
         </div>
         <div className='app__contact-input'>
-          <input name='phone' type="number" placeholder='Mobile Number' onChange={handleChange} />
-          <input name='subject' type="text" placeholder='Email Subject' onChange={handleChange} />
+          <input required name='phone' type="number" placeholder='Mobile Number' onChange={handleChange} />
+          <input required name='subject' type="text" placeholder='Email Subject' onChange={handleChange} />
         </div>
-        <textarea name="message" id="" cols="30" rows="10" placeholder='Youe Message' onChange={handleChange} ></textarea>
+        <textarea required name="message" id="" cols="30" rows="10" placeholder='Youe Message' onChange={handleChange} ></textarea>
         <button type='submit' className='app__btn'  >Send Message</button>
       </form>
     </div>

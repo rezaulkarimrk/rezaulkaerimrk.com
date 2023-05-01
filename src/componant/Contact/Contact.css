@@ -37,6 +37,10 @@
     width: 49%;
 }
 
+form.app__contact-form button {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 2000px) {
     .app__contact-form {
         width: 150rem;
@@ -69,8 +73,6 @@
     }
     
 }
-
-
 
 .app__contact-warning {
     position: fixed;
